@@ -13,4 +13,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pokemon-seeker.DataAccess\Pokemon-seeker.DataAccess.csproj" />
+    <ProjectReference Include="..\Pokemon-seeker.presentation\Pokemon-seeker.Presentation.csproj" />
+  </ItemGroup>
+
 </Project>
