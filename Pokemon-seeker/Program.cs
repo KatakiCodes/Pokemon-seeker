@@ -1,5 +1,5 @@
-using Pokemon_seeker.Interfaces;
-using Pokemon_seeker.Services;
+using Pokemon_seeker.Services.Implementations;
+using Pokemon_seeker.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +10,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IPokedex_Service, Pokedex_Service>();
+builder.Services.AddScoped<IPokemonJsonConverter, PokemonJsonConverter>();
 
 var app = builder.Build();
 
