@@ -1,7 +1,6 @@
 using System;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
-using Pokemon_seeker.DataAccess.ValueObjects;
 
 namespace Pokemon_seeker.DTOs.Responses;
 
