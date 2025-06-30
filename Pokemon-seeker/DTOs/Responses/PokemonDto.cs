@@ -2,7 +2,7 @@ using System;
 
 namespace Pokemon_seeker.DTOs.Responses;
 
-public class PokemonDto
+public record PokemonDto
 {
     public int Id { get; set; }
     public string Name { get; set; }
