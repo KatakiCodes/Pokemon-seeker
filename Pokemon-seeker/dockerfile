@@ -5,7 +5,7 @@ WORKDIR /src
 COPY . .
 
 # Publica diretamente o projeto principal
-RUN dotnet publish Pokemon-seeker.presentation/Pokemon-seeker.presentation.csproj -c Release -o /app/publish
+RUN dotnet publish Pokemon-seeker/Pokemon-seeker.Api.csproj -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
 WORKDIR /app
@@ -14,4 +14,4 @@ COPY --from=build /app/publish .
 
 EXPOSE 80
 
-ENTRYPOINT ["dotnet", "Pokemon-seeker.presentation.dll"]
+ENTRYPOINT ["dotnet", "Pokemon-seeker.Api.dll"]
